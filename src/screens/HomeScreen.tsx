@@ -43,8 +43,6 @@ function HomeScreen({ navigation }: any) {
     }
     getAuthorsList();
   }, [page]);
-
-
   const RenderItem: any = useCallback(({ item }) => {
     return (
       <AuthorCard
