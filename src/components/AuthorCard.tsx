@@ -7,14 +7,14 @@ import {
   Paragraph,
   Chip,
 } from 'react-native-paper';
-import {StyleSheet, View} from 'react-native';
-const LeftContent = (props:any) => <Avatar.Icon {...props} icon="folder" />;
+import { StyleSheet, View } from 'react-native';
+const LeftContent = (props: any) => <Avatar.Icon {...props} icon="folder" />;
 
-type propTypes ={
-  title:string, url:string, created_at:string, tags:string[], author:string
+type propTypes = {
+  title: string, url: string, created_at: string, tags: string[], author: string
 }
 
-const AuthorCard = ({title, url, created_at, tags, author}:propTypes) => {
+const AuthorCard = ({ title, url, created_at, tags, author }: propTypes) => {
   return (
     <View style={styles.card}>
       <Card elevation={2}>
@@ -24,7 +24,7 @@ const AuthorCard = ({title, url, created_at, tags, author}:propTypes) => {
           <Paragraph>{created_at}</Paragraph>
         </Card.Content>
         <View style={styles.tags}>
-          {tags?.map((item,index) => (
+          {tags?.map((item, index) => (
             <Chip key={index} icon="tag-multiple" onPress={() => console.log('Pressed')}>
               {item}
             </Chip>
